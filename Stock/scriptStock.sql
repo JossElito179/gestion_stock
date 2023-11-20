@@ -64,11 +64,13 @@ insert into Type_sortie values (default ,'FIFO'),
                                (default ,'LIFO');
 
 
-insert into Magasin values (default , 'M1'),
-                           (default ,'M2');
+insert into Magasin values (default , 'Magasin 1'),
+                           (default , 'Magasin 2'),
+                           (default ,'Magasin 3');
 
-insert into Article values (default , 'RO1' , 'KG' ,1),
-                    (default , 'RO12' , 'KG' ,1);
+insert into Article values (default , 'AR1' , 'KG' ,1),
+                    (default , 'AR2' , 'KG' ,2),
+                    (default , 'AL1' , 'L' ,1);
 
 create view v_quantite_article as select DISTINCT idmagasin,idArticle,sum(entre_stock.quantite) as reste from entre_stock group by idArticle,idmagasin ;
 

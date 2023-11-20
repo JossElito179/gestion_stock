@@ -6,11 +6,11 @@
             <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/web/Sortiestock.jsp</file>
             <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/web/index.jsp</file>
             <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/web/EtatStockCondition.jsp</file>
+            <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/web/AllEtatView.jsp</file>
             <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/src/java/controllers/EtatStock.java</file>
-            <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/src/java/controllers/EntrerServlet.java</file>
             <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/src/java/models/SortiedEntre.java</file>
-            <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/src/java/controllers/SortieServlet.java</file>
             <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/web/ChoixEtatStock.jsp</file>
+            <file>file:/C:/Users/joss%20elito/Documents/NetBeansProjects/Stock/src/java/controllers/AllEtatStock.java</file>
         </group>
     </open-files>
 </project-private>

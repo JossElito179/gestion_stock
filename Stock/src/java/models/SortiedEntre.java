@@ -282,6 +282,14 @@ public class SortiedEntre {
         }
         dbcon.close();
         SortiedEntre.arangeTable(reste_entre,arc.getIdTypeSortie());
+            for (int i = 0; i < reste_entre.size(); i++) {
+                for (int j = i+1; j < reste_entre.size(); j++) {
+                    if (reste_entre.get(i).getIdentrestock()==reste_entre.get(j).getIdentrestock()) {
+                        reste_entre.remove(j);
+                    }
+                }
+            }
+
         return reste_entre;
     }
     
@@ -334,7 +342,7 @@ public class SortiedEntre {
         String query="select sum(entre_stock.quantite)-sum(sortie_stock.quantite) as reste\r\n" + //
         " from entre_stock join sortie_stock on entre_stock.idArticle=sortie_stock.idArticle \r\n" + //
         " where entre_stock.idArticle="+idArtcile+ "\r\n" + //
-        "and entre_stock.idMagasin="+idMagasin+"and sortie_stock.date_sortie<'"+date1+"'";
+        "and entre_stock.idMagasin="+idMagasin+"and entre_stock.date_entre<'"+date1+"'";
         PreparedStatement stts=connection.prepareStatement(query);
         System.out.println(query);
         ResultSet res=stts.executeQuery();
@@ -396,6 +404,8 @@ public class SortiedEntre {
                 rest=res.getFloat("reste");                    
             }
             connection.close();   
+        }else if(rest==0 && sortie!=0){
+            rest=sortie;
         }
         return rest;
     }
